@@ -18,8 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return 'home page';
+    return view('home');
 });
-Route::get('/about', function () {
-    return 'about page';
+Route::get('/signin', function () {
+    return view ('signin');
+});
+Route::get('/signup', function () {
+    return view ('signup');
 });
