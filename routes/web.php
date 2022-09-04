@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\login;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,20 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/home', function () {
     return view('home');
 });
-Route::get('/signin', function () {
-    return view ('signin');
-});
-Route::get('/signup', function () {
-    return view ('signup');
-});
-Route::post('/user', function () {
-    return view ('user');
+
+Route::get('/signin',[login :: class,'index']);
+Route::post('/login',[login :: class,'showdata']);
+
+// Route::post('./login' ,function(){
+//     return view('user');
+// });
+
+Route::get('/user/{name}', function ($name) {
+    return view ('user')->with('name',$name);
 });

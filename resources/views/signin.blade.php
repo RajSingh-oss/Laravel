@@ -21,31 +21,32 @@
 <body>
       <div class="mainbox">
             <h1>Sign In!</h1>
-            <form method="post" action="./user" class="row g-3">
+            <form method="post" action="{{url('/')}}/login" class="row g-3">
+                  @csrf
                   <div class="row g-3">
                         <div class="col">
-                              <input required type="text" class="form-control" placeholder="First name" aria-label="First name">
+                              <input required type="text" name="name" id="name" class="form-control" placeholder="First name" aria-label="First name">
                         </div>
-                        <div class="col">
-                              <input type="text" required class="form-control" placeholder="Last name" aria-label="Last name">
+                       <div class="col">
+                              <input type="text" required name="LastName" class="form-control" placeholder="Last name" aria-label="Last name">
                         </div>
                   </div>
                   <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping">@</span>
-                        <input required type="text" class="form-control" placeholder="Display username" aria-label="Username"
+                        <input required name="UserName" type="text" class="form-control" placeholder="Display username" aria-label="Username"
                               aria-describedby="addon-wrapping">
                   </div>
                   <div class="form-floating mb-3">
-                        <input required type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input required type="email" name="Email" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email address</label>
                   </div>
                   <div class="form-floating">
-                        <input required type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input required type="password" name="Passwd" class="form-control" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                   </div>
                   <div class="col-md-4">
                         <label for="inputState" class="form-label">Country</label>
-                        <select id="inputState" class="form-select">
+                        <select id="inputState" name="Country" class="form-select">
                                     <option value="AFG">Afghanistan</option>
                                     <option value="ALA">Åland Islands</option>
                                     <option value="ALB">Albania</option>
@@ -303,14 +304,9 @@
                   </div>
             </form>
       </div>
-      <!-- Optional JavaScript; choose one of the two! -->
-
-      <!-- Option 1: Bootstrap Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
       </script>
-
-      <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
