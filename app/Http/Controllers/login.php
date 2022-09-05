@@ -9,10 +9,17 @@ class login extends Controller
     public function index(){
         return view ('signin');
     }
-    public function showdata(Request $request)
+    public function signup(){
+        return view ('signup');
+    }
+    public function savedata(Request $request)
     {
         echo "<pre>";
         print_r($request -> all());
-        // return ("show data");
+    }
+    public function login(Request $request){
+        echo "<pre>";
+        print_r($request -> all());
+        return('This is log in page');
     }
 }

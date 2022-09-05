@@ -18,11 +18,10 @@ Route::get('/home', function () {
 });
 
 Route::get('/signin',[login :: class,'index']);
-Route::post('/login',[login :: class,'showdata']);
+Route::get('/signup',[login :: class,'signup']);
+Route::post('/create',[login :: class,'savedata']);
 
-// Route::post('./login' ,function(){
-//     return view('user');
-// });
+Route::post('/login',[login::class,'login']);
 
 Route::get('/user/{name}', function ($name) {
     return view ('user')->with('name',$name);
