@@ -62,7 +62,7 @@
       </nav>
       <div class="container my-3">
             <h1>Wellcome to note taking app</h1>
-            <p class="fs-1">{{ $name }}</p>
+            <p class="fs-1">Hello {{ $name }} ( "_" ) !</p>
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                   <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
                         <path
@@ -83,7 +83,7 @@
                         <use xlink:href="#info-fill" />
                   </svg>
                   <div>
-                        Wellcome {{$name}}! Sign in success.
+                        Wellcome {{$name}}! Sign in success, Sign in at {{ date('Y-m-d') }} Loged.
                   </div>
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -156,16 +156,16 @@
                               <th scope="col">Heading</th>
                               <th scope="col">Note</th>
                               <th scope="col">Date</th>
-                              <th scope="col">Handle</th>
+                              <th scope="col">Option</th>
                         </tr>
                   </thead>
                   <tbody>
                         <tr>
                               <th scope="row">1</th>
-                              <td>Mark</td>
+                              <td>hello</td>
                               <td>This is a note</td>
                               <td>10-02-2022</td>
-                              <td>@mdo</td>
+                              <td>option</td>
                         </tr>
                         <tr>
                               <th scope="row">2</th>
@@ -178,7 +178,23 @@
                               <th scope="row">3</th>
                               <td colspan="2">Larry the Bird</td>
                               <td>10-02-2022</td>
-                              <td>@twitter</td>
+                              <td>
+                                    <div class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Option
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="#notes">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#newnote">Delete</a></li>
+                                                <li>
+                                                      <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="../logout">Done</a></li>
+                                                <li><a class="dropdown-item" href="../logout">Working</a></li>
+                                          </ul>
+                                    </div>
+                              </td>
                         </tr>
                         <tr>
                               <th scope="row">4</th>
@@ -240,7 +256,7 @@
                               <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                                     <!-- Content -->
                                     <h6 class="text-uppercase fw-bold mb-4">
-                                          <i class="fas fa-gem me-3"></i>Company name
+                                          <i class="fas fa-gem me-3"></i>Note taking app
                                     </h6>
                                     <p>
                                           Here you can use rows and columns to organize your footer content. Lorem ipsum
@@ -256,16 +272,19 @@
                                           Products
                                     </h6>
                                     <p>
-                                          <a href="#!" class="text-reset">Angular</a>
+                                          <a href="#!" class="text-reset">This note app</a>
                                     </p>
                                     <p>
-                                          <a href="#!" class="text-reset">React</a>
+                                          <a href="https://tendimension.in" target="_blank" class="text-reset">ten
+                                                dimension.in</a>
                                     </p>
                                     <p>
-                                          <a href="#!" class="text-reset">Vue</a>
+                                          <a href="https://www.instagram.com/rahul_singh_61/" class="text-reset">Dev
+                                                rahul_singh_61</a>
                                     </p>
                                     <p>
-                                          <a href="#!" class="text-reset">Laravel</a>
+                                          <a href="https://www.facebook.com/TechandCoding/" class="text-reset">Tech and
+                                                Coding</a>
                                     </p>
                               </div>
                               <!-- Grid column -->
@@ -295,13 +314,16 @@
                               <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                     <!-- Links -->
                                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                                    <!-- <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p> -->
                                     <p>
                                           <i class="fas fa-envelope me-3"></i>
-                                          info@example.com
+                                          rahul_singh_61
                                     </p>
-                                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                                    <p>
+                                          <a href="https://www.instagram.com/rahul_singh_61/" class="text-reset">Dev
+                                                rahul_singh_61</a>
+                                    </p>
+                                    <!-- <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p> -->
                               </div>
                               <!-- Grid column -->
                         </div>
@@ -313,7 +335,7 @@
             <!-- Copyright -->
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
                   © 2021 Copyright:
-                  <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                  <a class="text-reset fw-bold" href="https://tendimension.in">tendimension.in</a>
             </div>
             <!-- Copyright -->
       </footer>

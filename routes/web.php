@@ -26,3 +26,7 @@ Route::post('/login',[login::class,'login']);
 Route::get('/user/{name}', function ($name) {
     return view ('user')->with('name',$name);
 });
+
+Route::get('/user/{name}/noteid/{noteid}', function ($postId, $commentId) {
+    //
+});
