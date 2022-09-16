@@ -30,8 +30,7 @@
                   </div>
                   <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping">@</span>
-                        <input required name="UserName" type="text" class="form-control" placeholder="Display username" aria-label="Username"
-                              aria-describedby="addon-wrapping">
+                        <input required name="ShowName" type="text" class="form-control" placeholder="Display username" aria-label="Showname" aria-describedby="addon-wrapping">
                   </div>
                   <div class="form-floating mb-3">
                         <input required type="email" name="Email" class="form-control" id="floatingInput" placeholder="name@example.com">
