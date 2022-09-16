@@ -1,27 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <title>Home page for this login system</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <title>Note Heading</title>
 </head>
 
 <body>
-      <div class="container">
-            <h1>Home page for this login system</h1>
-            <p>Here you can Sign in OR sign up</p>
-            <img src="{{URL('/images/noteapp.jpg')}}" class="img-fluid" alt="...">
-            <p>Photo by <a href="https://unsplash.com/@84media?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brian Tromp</a> on <a href="https://unsplash.com/t/business-work?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </p>
-            <p class="fs-3">This is a note taking app just create your or if you have alrady an acount just login and in
-                  your acount and you can create, edit, update and delete.</p>
-            <a class="btn btn-outline-primary" href="./signin" role="button">Sign in</a>
-            <a class="btn btn-outline-primary" href="./signup" role="button">Sign up</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                  <a class="navbar-brand" href="./about/App">Note App</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="../home">Profile</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="./about/Use">Use</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                          data-bs-toggle="dropdown" aria-expanded="false">
+                                          Option
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <li><a class="dropdown-item" href="#notes">Notes</a></li>
+                                          <li><a class="dropdown-item" href="#newnote">Add new note</a></li>
+                                          <li>
+                                                <hr class="dropdown-divider">
+                                          </li>
+                                          <li><a class="dropdown-item" href="../logout">Sign out</a></li>
+                                    </ul>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="../logout" tabindex="-1" aria-disabled="true">Log out</a>
+                              </li>
+                        </ul>
+                        <form class="d-flex">
+                              <input class="form-control me-2" type="search" placeholder="Search in note"
+                                    aria-label="Search">
+                              <button class="btn btn-outline-success btn-light" type="submit">Search</button>
+                        </form>
+                  </div>
+            </div>
+      </nav>
+      <div class="container my-3">
+            <h1>Note id is -> {{$note_id}}</h1>
+            <h2>Name is {{$name}}</h2>
+
+            <div class="form-floating">
+                  <textarea class="form-control" style="height:500px;" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 900px">@for ($i = 0; $i <= 10; $i++)
+                        The current value is {{ $i }}
+                        @endfor
+                  </textarea>
+                  <label for="floatingTextarea2">{{$note_id}}</label>
+            </div><br>
+            <div>
+                  <button type="button" class="btn btn-secondary">Mark as working</button>
+                  <button type="button" id="savemodal" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#saveModal">Save</button>
+            </div>
       </div>
-      
+      <!-- Button trigger modal -->
+      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+      </button> -->
+
+      <!-- Modal -->
+      <div class="modal fade " id="saveModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Save note</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                              ...
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
       <!-- Footer -->
       <footer class="text-center text-lg-start bg-light text-muted">
             <!-- Section: Social media -->
@@ -68,9 +142,9 @@
                                     <h6 class="text-uppercase fw-bold mb-4">
                                           <i class="fas fa-gem me-3"></i>Note taking app
                                     </h6>
-                                    <p class="fs-5">this is a dummy project website written in php Laravel as backend and front end using
-                  bootstrap hope you like this project and any one can ues it. <br><b> - <a target="_blank"
-                              href="https://github.com/RajSingh-oss">RajSingh</a></b> Thank you
+                                    <p>
+                                          Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                          dolor sit amet, consectetur adipisicing elit.
                                     </p>
                               </div>
                               <!-- Grid column -->
@@ -150,6 +224,14 @@
             <!-- Copyright -->
       </footer>
       <!-- Footer -->
+      <script>
+      var myModal = document.getElementById('myModal')
+      var myInput = document.getElementById('myInput')
+
+      myModal.addEventListener('shown.bs.modal', function() {
+            myInput.focus()
+      })
+      </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
       </script>
@@ -159,7 +241,11 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
       </script>
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+      </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -22,4 +22,6 @@ class login extends Controller
         print_r($request -> all());
         return('This is log in page');
     }
+    ///////////////////////////////////////////////////////////////////////////////
+   
 }

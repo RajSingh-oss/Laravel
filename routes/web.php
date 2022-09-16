@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login;
+use App\Http\Controllers\note;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,8 @@ Route::post('/create',[login :: class,'savedata']);
 
 Route::post('/login',[login::class,'login']);
 
+Route::get('/user/{name}/{note_id}', [note :: class,'edit'] );
+
 Route::get('/user/{name}', function ($name) {
     return view ('user')->with('name',$name);
-});
-
-Route::get('/user/{name}/noteid/{noteid}', function ($postId, $commentId) {
-    //
 });

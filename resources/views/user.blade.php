@@ -165,14 +165,46 @@
                               <td>hello</td>
                               <td>This is a note</td>
                               <td>10-02-2022</td>
-                              <td>option</td>
+                              <td>
+                              <div class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Option
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                      <li><a class="dropdown-item" href="./{{$name}}/heading_id">Open</a></li>
+                                                <li><a class="dropdown-item" href="#newnote">Delete</a></li>
+                                                <li>
+                                                      <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="../logout">Done</a></li>
+                                                <li><a class="dropdown-item" href="../logout">Working</a></li>
+                                          </ul>
+                                    </div>
+                              </td>
                         </tr>
                         <tr>
                               <th scope="row">2</th>
                               <td>Jacob</td>
                               <td>Thornton</td>
                               <td>10-02-2022</td>
-                              <td>@fat</td>
+                              <td>
+                              <div class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Option
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="#notes">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#newnote">Delete</a></li>
+                                                <li>
+                                                      <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="../logout">Done</a></li>
+                                                <li><a class="dropdown-item" href="../logout">Working</a></li>
+                                          </ul>
+                                    </div>
+                              </td>
                         </tr>
                         <tr>
                               <th scope="row">3</th>
@@ -201,13 +233,45 @@
                               <td>Larry the Bird</td>
                               <td>Larry the Bird</td>
                               <td>10-02-2022</td>
-                              <td>@aimless</td>
+                              <td>
+                              <div class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Option
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="#notes">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#newnote">Delete</a></li>
+                                                <li>
+                                                      <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="../logout">Done</a></li>
+                                                <li><a class="dropdown-item" href="../logout">Working</a></li>
+                                          </ul>
+                                    </div>
+                              </td>
                         </tr>
                         <tr>
                               <th scope="row">5</th>
                               <td>Larry the Bird</td>
                               <td colspan="2">10-02-2022</td>
-                              <td>@noteApp</td>
+                              <td>
+                              <div class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Option
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="#notes">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#newnote">Delete</a></li>
+                                                <li>
+                                                      <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="../logout">Done</a></li>
+                                                <li><a class="dropdown-item" href="../logout">Working</a></li>
+                                          </ul>
+                                    </div>
+                              </td>
                         </tr>
                   </tbody>
             </table>
