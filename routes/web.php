@@ -17,12 +17,15 @@ use App\Http\Controllers\note;
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/signin',[login :: class,'index']);
+Route::get('/SignIn',[login :: class,'SignIn']);
+Route::post('/Signin',[login :: class,'login']);
 Route::get('/signup',[login :: class,'signup']);
-Route::post('/create',[login :: class,'savedata']);
+Route::post('/user',[login :: class,'savedata']);
 
-Route::post('/login',[login::class,'login']);
 
 Route::get('/user/{name}/{note_id}', [note :: class,'edit'] );
 

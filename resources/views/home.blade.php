@@ -18,7 +18,7 @@
   </p>
             <p class="fs-3">This is a note taking app just create your or if you have alrady an acount just login and in
                   your acount and you can create, edit, update and delete.</p>
-            <a class="btn btn-outline-primary" href="./signin" role="button">Sign in</a>
+            <a class="btn btn-outline-primary" href="./SignIn" role="button">Sign in</a>
             <a class="btn btn-outline-primary" href="./signup" role="button">Sign up</a>
       </div>
       
