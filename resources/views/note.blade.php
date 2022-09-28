@@ -55,16 +55,17 @@
                   </div>
             </div>
       </nav>
+      
+      @foreach ($note as $not)
       <div class="container my-3">
-            <h1>Note id is -> {{$note_id}}</h1>
-            <h2>Name is {{$name}}</h2>
+            <h1>Note tag is -># {{$not->tag1 }}</h1>
+            <h2>Edit your note <em>"{{$name}}"</em></h2>
 
             <div class="form-floating">
-                  <textarea class="form-control" style="height:500px;" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 900px">@for ($i = 0; $i <= 10; $i++)
-                        The current value is {{ $i }}
-                        @endfor
-                  </textarea>
-                  <label for="floatingTextarea2">{{$note_id}}</label>
+                  <textarea class="form-control" style="height:500px;" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 900px"> 
+
+{{$not ->note}}</textarea>
+                  <label for="floatingTextarea2"><p class="fs-2 text">{{$not->heading }}</p></label>
             </div><br>
             <div>
                   <button type="button" class="btn btn-secondary">Mark as working</button>
@@ -72,6 +73,7 @@
                         data-bs-target="#saveModal">Save</button>
             </div>
       </div>
+      @endforeach
       <!-- Button trigger modal -->
       <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Launch demo modal

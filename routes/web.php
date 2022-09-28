@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login;
-use App\Http\Controllers\note;
+use App\Http\Controllers\user;
+use App\Http\Controllers\noteCRUD;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +28,10 @@ Route::get('/signup',[login :: class,'signup']);
 Route::post('/user',[login :: class,'savedata']);
 
 
-Route::get('/user/{name}/{note_id}', [note :: class,'edit'] );
 
-Route::get('/user/{name}', function ($name) {
-    return view ('user')->with('name',$name);
-});
+Route::get('/user/{name}/{note_id}', [noteCRUD :: class,'edit'] );
+
+
+Route::post('/addNote',[noteCRUD :: class,'Addnote']);
+
+Route::get('/user/{name}', [user:: class ,'userpage']);
